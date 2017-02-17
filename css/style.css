@@ -7,16 +7,11 @@
     font-style: normal;
     font-weight: normal;
 }
-html, body, div, span,
-h1, h2, p,
-a, img,
-small, ul, li{
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	outline: 0;
-}
-* {
 	box-sizing: border-box;
 }
 html {
@@ -37,70 +32,34 @@ h1 {
 h2 {
 	font-size: 1.125rem;
 }
-.wrap {
+.page-wrap {
 	position: relative;
 	width: 563px;
 	margin: 200px auto 50px;
 }
-.page {
+.generic-page {
 	width: 523px;
 	padding: 33px;
 	border: 2px solid #000;
 }
-.page-1 {
+.main-page {
 	position: relative;
+	min-height: 750px;
 	background-color: #ebebeb;
 }
-.page-2, .page-3 {
+.prototype-page {
 	position: absolute;
 	height: 100%;
-} 
-.page-2 {
-	top: 20px;
-	left: 20px;
-	background-color: #ccc;
 }
-.page-3 {
+.prototype-page:nth-child(1) {
 	top: 40px;
 	left: 40px;
 	background-color: #acacac;
 }
-.inf-content h1 {
-	margin-bottom: 14px;
-}
-.inf-content-item {
-	margin-bottom: 17px;
-}
-.inf-content-item:after,
-.img-content-item:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-.inf-content-item img {
-	margin-bottom: 14px;
-}
-.inf-content-item:nth-child(even) img {
-	float: left;
-	margin-right: 21px;
-}
-.inf-content-item:nth-child(odd) img {
-	float: right;
-	margin-left: 6px;
-}
-.img-content h2 {
-	margin-bottom: 21px;
-}
-.img-content-item {
-	margin-bottom: 14px;
-}
-.img-content img:first-child {
-	float: left;
-}
-.img-content img:last-child {
-	float: right;
+.prototype-page:nth-child(2){
+	top: 20px;
+	left: 20px;
+	background-color: #ccc;
 }
 .bookmark {
 	position: absolute;
@@ -112,16 +71,58 @@ h2 {
 	border-bottom-right-radius: 10px;
 	border-top-right-radius: 10px;
 }
-.page-1 .bookmark {
+.main-page .bookmark {
 	background-color:  #f68e56;
 }
-.page-2 .bookmark {
+.prototype-page:nth-child(1) .bookmark {
+	right: -22px;
+	background-color:  #00aeef;
+}
+.prototype-page:nth-child(2) .bookmark {
 	right: -52px;
 	background-color:  #39b54a;
 }
-.page-3 .bookmark {
-	right: -22px;
-	background-color:  #00aeef;
+.inf-content h1 {
+	margin-bottom: 14px;
+}
+.inf-content-item {
+	margin-bottom: 17px;
+}
+.inf-content p {
+	margin-bottom: 14px;
+	margin-top: 14px;
+}
+.inf-content-item:after,
+.img-content-item:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.inf-content-item img {
+	margin-bottom: 14px;
+	margin-top: 14px;
+}
+.inf-content-item img:nth-child(odd) {
+	float: left;
+	margin-right: 21px;
+}
+.inf-content-item img:nth-child(even) {
+	float: right;
+	margin-left: 6px;
+}
+.img-content h2 {
+	margin-bottom: 21px;
+}
+.img-content-item img {
+	margin-bottom: 14px;
+}
+.img-content-item img:nth-child(odd) {
+	float: left;
+}
+.img-content-item img:nth-child(even) {
+	float: right;
 }
 footer {
 	margin-top: 14px;
