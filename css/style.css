@@ -16,6 +16,9 @@ small, ul, li{
 	border: 0;
 	outline: 0;
 }
+* {
+	box-sizing: border-box;
+}
 html {
 	font-size: normal;
 	line-height: 1.23;
@@ -37,36 +40,33 @@ h2 {
 .wrap {
 	position: relative;
 	width: 563px;
-	height: 750px;
-	margin: 200px auto;
+	margin: 200px auto 50px;
 }
 .page {
-	position: absolute;
 	width: 523px;
-	height: 750px;
 	padding: 33px;
 	border: 2px solid #000;
-	/*overflow-y: hidden;*/ 
-    box-sizing: border-box;
 }
 .page-1 {
+	position: relative;
 	background-color: #ebebeb;
-	z-index: 9;
 }
+.page-2, .page-3 {
+	position: absolute;
+	height: 100%;
+} 
 .page-2 {
 	top: 20px;
 	left: 20px;
 	background-color: #ccc;
-	z-index: 5;
 }
 .page-3 {
 	top: 40px;
 	left: 40px;
 	background-color: #acacac;
-	z-index: 1;
 }
 .inf-content h1 {
-	margin: 0 0 14px 0;
+	margin-bottom: 14px;
 }
 .inf-content-item {
 	margin-bottom: 17px;
@@ -128,16 +128,12 @@ footer {
 	text-align: center;
 }
 .social-links {
-    box-sizing: border-box;
 	position: fixed;
-	right: 0;
-	bottom: 0;
-	width: 88px;
-	height: 71px;
-	padding: 6px;
+	right: 2px;
+	bottom: 2px;
+	padding: 7px 6px;
 	background-color:  #fbaf5d;
 	border: 1px solid #362f2d;
-	z-index: 11;
 }
 .social-links h2 {
 	margin: 4px 0 9px;
@@ -149,17 +145,17 @@ footer {
     height: 20px;
     margin-right: 4px;
     display: inline-block;
-    background: #000 url(../img/sprite-icon-1.png) no-repeat;
-    background-size: 250%;
+    background: #000 url(../img/sprite-icon.png) no-repeat;
+    background-size: 240%;
     border-radius: 100%;
 }
 .social-icon.facebook {
 	background-color: #4e71a8;
-    background-position: -32px;
+    background-position: -30px;
 }
 .social-icon.twitter {
 	background-color: #1cb7eb;
-    background-position: 1px;
+    background-position: 2px;
 }
 .social-icon.instagram {
 	background-color: #343434;
