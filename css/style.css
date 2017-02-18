@@ -15,8 +15,7 @@
 	box-sizing: border-box;
 }
 html {
-	font-size: normal;
-	line-height: 1.23;
+	line-height: 1.16;
 }
 body {
 	height: 2000px;
@@ -28,9 +27,11 @@ body {
 }
 h1 {
 	font-size: 1.5rem;
+	font-weight: 400;
 }
 h2 {
 	font-size: 1.125rem;
+	font-weight: 400;
 }
 .page-wrap {
 	position: relative;
@@ -39,12 +40,12 @@ h2 {
 }
 .generic-page {
 	width: 523px;
-	padding: 33px;
+	padding: 28px 32px;
 	border: 2px solid #000;
 }
 .main-page {
 	position: relative;
-	min-height: 750px;
+	min-height: 730px;
 	background-color: #ebebeb;
 }
 .prototype-page {
@@ -82,15 +83,11 @@ h2 {
 	right: -52px;
 	background-color:  #39b54a;
 }
-.inf-content h1 {
-	margin-bottom: 14px;
-}
 .inf-content-item {
-	margin-bottom: 17px;
+	margin-bottom: 5px;
 }
 .inf-content p {
-	margin-bottom: 14px;
-	margin-top: 14px;
+	margin: 14px 0;
 }
 .inf-content-item:after,
 .img-content-item:after {
@@ -102,15 +99,16 @@ h2 {
 }
 .inf-content-item img {
 	margin-bottom: 14px;
-	margin-top: 14px;
 }
-.inf-content-item img:nth-child(odd) {
+.inf-content-item img:nth-of-type(odd) {
 	float: left;
 	margin-right: 21px;
+	clear: both;
 }
-.inf-content-item img:nth-child(even) {
+.inf-content-item img:nth-of-type(even) {
 	float: right;
 	margin-left: 6px;
+	clear: both;
 }
 .img-content h2 {
 	margin-bottom: 21px;
@@ -118,10 +116,10 @@ h2 {
 .img-content-item img {
 	margin-bottom: 14px;
 }
-.img-content-item img:nth-child(odd) {
+.img-content-item img:nth-of-type(odd) {
 	float: left;
 }
-.img-content-item img:nth-child(even) {
+.img-content-item img:nth-of-type(even) {
 	float: right;
 }
 footer {
