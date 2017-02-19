@@ -15,7 +15,7 @@
 	box-sizing: border-box;
 }
 html {
-	line-height: 1.16;
+	line-height: 1.17;
 }
 body {
 	height: 2000px;
@@ -86,8 +86,15 @@ h2 {
 .inf-content-item {
 	margin-bottom: 5px;
 }
-.inf-content p {
+.inf-content-item p {
 	margin: 14px 0;
+}
+.inf-content-item img + p {
+    margin-bottom: 0;
+}
+.inf-content-item p + p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .inf-content-item:after,
 .img-content-item:after {
@@ -99,6 +106,10 @@ h2 {
 }
 .inf-content-item img {
 	margin-bottom: 14px;
+	margin-top: 14px;
+}
+.inf-content-item img:nth-child(1) {
+	margin-top: 0;
 }
 .inf-content-item img:nth-of-type(odd) {
 	float: left;
